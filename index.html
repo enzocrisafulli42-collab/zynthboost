@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYNTH BOOST — Maximum Performance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Canvas Background -->
+    <canvas id="matrixCanvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="logo">ZYNTH</span>
+            <span class="logo-accent">BOOST</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link active">Inicio</a>
+            <a href="#download" class="nav-link">Descargar</a>
+            <a href="#docs" class="nav-link">Documentacion</a>
+            <a href="#features" class="nav-link">Features</a>
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="ZYNTH BOOST">ZYNTH BOOST</h1>
+            </div>
+            <p class="hero-subtitle">SYSTEM OVERRIDE ACTIVATED</p>
+            <p class="hero-description">
+                La modificacion extrema para Windows disenada para maximizar FPS, 
+                reducir latencia y eliminar bloatware. Domina tu sistema.
+            </p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">
+                    <span class="btn-text">DESCARGAR AHORA</span>
+                    <span class="btn-glow"></span>
+                </a>
+                <a href="#docs" class="btn btn-secondary">
+                    <span class="btn-text">VER DOCUMENTACION</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="30">0</span>
+                    <span class="stat-label">% MAS FPS</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">% MENOS LATENCIA</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">% BLOATWARE ELIMINADO</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-line"></span>
+                DESCARGAR
+                <span class="title-line"></span>
+            </h2>
+            <div class="download-grid">
+                <div class="download-card featured">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <span class="version">v3.0</span>
+                        <span class="badge">ULTIMA VERSION</span>
+                    </div>
+                    <h3>ZYNTH BOOST Playbook</h3>
+                    <p>Playbook completo para AME Wizard con todas las optimizaciones</p>
+                    <ul class="feature-list">
+                        <li>Eliminacion de bloatware</li>
+                        <li>Optimizacion gaming</li>
+                        <li>Tweaks de red</li>
+                        <li>Wallpaper ZYNTH OS</li>
+                        <li>Tema oscuro</li>
+                    </ul>
+                    <a href="#" class="btn btn-download" onclick="showDownloadModal()">
+                        <span class="btn-text">DESCARGAR .APBX</span>
+                        <span class="file-size">9.4 MB</span>
+                    </a>
+                </div>
+                <div class="download-card">
+                    <div class="card-header">
+                        <span class="version">v3.0</span>
+                    </div>
+                    <h3>ZYNTH BOOST Script</h3>
+                    <p>Script PowerShell standalone para optimizacion rapida</p>
+                    <ul class="feature-list">
+                        <li>Sin AME Wizard</li>
+                        <li>Ejecutar como Admin</li>
+                        <li>Optimizacion basica</li>
+                    </ul>
+                    <a href="#" class="btn btn-download-outline" onclick="showDownloadModal()">
+                        <span class="btn-text">DESCARGAR .PS1</span>
+                        <span class="file-size">2.1 MB</span>
+                    </a>
+                </div>
+            </div>
+            <div class="requirements">
+                <h4>REQUISITOS DEL SISTEMA</h4>
+                <div class="req-grid">
+                    <div class="req-item">
+                        <span class="req-icon">&#128187;</span>
+                        <span class="req-text">Windows 10/11 x64</span>
+                    </div>
+                    <div class="req-item">
+                        <span class="req-icon">&#128295;</span>
+                        <span class="req-text">Build 19045+ / 22631+</span>
+                    </div>
+                    <div class="req-item">
+                        <span class="req-icon">&#128274;</span>
+                        <span class="req-text">Defender desactivado</span>
+                    </div>
+                    <div class="req-item">
+                        <span class="req-icon">&#9889;</span>
+                        <span class="req-text">Conexion a internet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="docs">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-line"></span>
+                DOCUMENTACION
+                <span class="title-line"></span>
+            </h2>
+            <div class="docs-grid">
+                <div class="doc-card" onclick="toggleDoc(this)">
+                    <div class="doc-icon">&#128295;</div>
+                    <h3>Instalacion</h3>
+                    <p>Guia paso a paso para instalar ZYNTH BOOST</p>
+                    <div class="doc-content">
+                        <ol>
+                            <li>Descarga el archivo <code>ZYNTH_BOOST.apbx</code></li>
+                            <li>Abre <strong>AME Wizard</strong> como Administrador</li>
+                            <li>Arrastra el archivo .apbx a la ventana</li>
+                            <li>Selecciona tus preferencias (Defender, mitigaciones, etc.)</li>
+                            <li>Espera a que complete la instalacion (aprox. 15 min)</li>
+                            <li>Reinicia el sistema</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="doc-card" onclick="toggleDoc(this)">
+                    <div class="doc-icon">&#128736;</div>
+                    <h3>Tweaks de Rendimiento</h3>
+                    <p>Optimizaciones aplicadas al sistema</p>
+                    <div class="doc-content">
+                        <ul>
+                            <li><strong>Power Plan:</strong> Ultimate Performance</li>
+                            <li><strong>HPET:</strong> Desactivado para menor latencia</li>
+                            <li><strong>Nagle's Algorithm:</strong> Desactivado</li>
+                            <li><strong>GPU Priority:</strong> Alta para gaming</li>
+                            <li><strong>SysMain:</strong> Desactivado</li>
+                            <li><strong>Fullscreen Optimizations:</strong> Desactivadas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doc-card" onclick="toggleDoc(this)">
+                    <div class="doc-icon">&#128274;</div>
+                    <h3>Privacidad</h3>
+                    <p>Medidas de privacidad aplicadas</p>
+                    <div class="doc-content">
+                        <ul>
+                            <li><strong>Telemetria:</strong> Completamente desactivada</li>
+                            <li><strong>Cortana:</strong> Eliminada</li>
+                            <li><strong>Advertising ID:</strong> Desactivado</li>
+                            <li><strong>Location Tracking:</strong> Desactivado</li>
+                            <li><strong>WiFi Sense:</strong> Desactivado</li>
+                            <li><strong>Diagnostic Tracking:</strong> Desactivado</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doc-card" onclick="toggleDoc(this)">
+                    <div class="doc-icon">&#128187;</div>
+                    <h3>Bloatware Eliminado</h3>
+                    <p>Apps y servicios removidos</p>
+                    <div class="doc-content">
+                        <ul>
+                            <li>OneDrive completamente removido</li>
+                            <li>Xbox apps y servicios</li>
+                            <li>Cortana y busqueda web</li>
+                            <li>Microsoft Office Hub</li>
+                            <li>Skype, Teams, OneNote</li>
+                            <li>Mapas, Clima, Noticias</li>
+                            <li>Solitaire, 3D Builder</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doc-card" onclick="toggleDoc(this)">
+                    <div class="doc-icon">&#128260;</div>
+                    <h3>Optimizacion de Red</h3>
+                    <p>Tweaks de red para menor ping</p>
+                    <div class="doc-content">
+                        <ul>
+                            <li><strong>TCP/IP:</strong> Autotuning desactivado</li>
+                            <li><strong>Chimney:</strong> Desactivado</li>
+                            <li><strong>RSS:</strong> Activado</li>
+                            <li><strong>Timestamps:</strong> Desactivados</li>
+                            <li><strong>LLMNR:</strong> Desactivado</li>
+                            <li><strong>NetBIOS:</strong> Desactivado</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="doc-card" onclick="toggleDoc(this)">
+                    <div class="doc-icon">&#127912;</div>
+                    <h3>Apariencia ZYNTH OS</h3>
+                    <p>Tema visual aplicado</p>
+                    <div class="doc-content">
+                        <ul>
+                            <li><strong>Tema:</strong> Oscuro completo</li>
+                            <li><strong>Wallpaper:</strong> ZYNTH OS oficial</li>
+                            <li><strong>Animaciones:</strong> Desactivadas</li>
+                            <li><strong>Taskbar:</strong> Limpia (sin Cortana, Task View)</li>
+                            <li><strong>Iconos escritorio:</strong> Ocultos</li>
+                            <li><strong>Spotlight:</strong> Desactivado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-line"></span>
+                FEATURES
+                <span class="title-line"></span>
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">&#128640;</div>
+                    <h3>Maximo Rendimiento</h3>
+                    <p>Optimizaciones extremas para gaming. Modo Ultimate Performance, HPET desactivado, prioridad GPU maxima.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128274;</div>
+                    <h3>Maxima Privacidad</h3>
+                    <p>Telemetria completamente eliminada. Sin tracking, sin data collection, sin Cortana.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128465;</div>
+                    <h3>Sin Bloatware</h3>
+                    <p>OneDrive, Xbox, Office Hub y mas de 20 apps innecesarias completamente removidas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128260;</div>
+                    <h3>Red Optimizada</h3>
+                    <p>Nagle's Algorithm desactivado, TCP/IP optimizado. Menor ping en juegos online.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#9889;</div>
+                    <h3>Latencia Minima</h3>
+                    <p>Fullscreen optimizations desactivadas, Game DVR eliminado. Respuesta instantanea.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#127912;</div>
+                    <h3>Estetica ZYNTH</h3>
+                    <p>Tema oscuro completo, wallpaper ZYNTH OS, interfaz limpia y minimalista.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <span class="logo">ZYNTH</span>
+                <span class="logo-accent">BOOST</span>
+            </div>
+            <p class="footer-text">SYSTEM OVERRIDE COMPLETE</p>
+            <div class="footer-links">
+                <a href="https://github.com/ZYNTH-BOOST/ZYNTH" target="_blank">GitHub</a>
+                <a href="https://docs.zynthboost.net" target="_blank">Docs</a>
+                <a href="https://ko-fi.com/zynthboost" target="_blank">Donar</a>
+            </div>
+            <p class="footer-copy">ZYNTH BOOST v3.0 | Powered by ZYNTH OS</p>
+        </div>
+    </footer>
+
+    <!-- Download Modal -->
+    <div id="downloadModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeDownloadModal()">&times;</span>
+            <h2>DESCARGA ZYNTH BOOST</h2>
+            <p>Gracias por descargar ZYNTH BOOST v3.0</p>
+            <div class="modal-buttons">
+                <a href="ZYNTH_BOOST.apbx" download class="btn btn-primary">
+                    <span class="btn-text">DESCARGAR PLAYBOOK</span>
+                </a>
+                <a href="ZYNTH_BOOST.ps1" download class="btn btn-secondary">
+                    <span class="btn-text">DESCARGAR SCRIPT</span>
+                </a>
+            </div>
+            <p class="modal-note">Recuerda ejecutar AME Wizard como Administrador</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
